@@ -1,0 +1,36 @@
+api_config:
+  url: https://randomuser.me/api/
+  results: 10
+  timeout: 15
+
+data_config:
+  raw_columns:
+    - gender
+    - name.first
+    - name.last
+    - email
+    - dob.age
+    - location.city
+    - location.country
+    - nat
+    - registered.date
+  rename_columns:
+    gender: gender
+    name.first: first_name
+    name.last: last_name
+    email: email
+    dob.age: age
+    location.city: city
+    location.country: country
+    nat: nationality
+    registered.date: registration_date
+  text_columns:
+    - gender
+    - first_name
+    - last_name
+    - email
+    - city
+    - country
+    - nationality
+  db_file: projeto_de.db
+  table_name: users_random
